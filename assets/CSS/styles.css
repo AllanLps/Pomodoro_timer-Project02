@@ -1,0 +1,227 @@
+:root {
+  --blue-900: #151932;
+  --blue-800: #1e2140;
+  --blue-100: #d8ddfb;
+
+  --white: #ffffff;
+
+  --gray-200: #cccccc;
+
+  --orange-300: #f7716e;
+
+  --green-300: #23c266;
+
+  --red-800: #fa0500;
+
+  --font-poppins: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--blue-800);
+
+  font-family: var(--font-poppins);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.title {
+  padding: 5rem 0;
+
+  color: var(--blue-100);
+
+  font-family: var(--font-poppins);
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.buttons-menu {
+  background-color: var(--blue-900);
+  border-radius: 30px;
+
+  padding: 0.7rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-pomodoro,
+.button-smallBreak,
+.button-longBreak {
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 30px;
+  border: none;
+
+  padding: 0.5rem;
+
+  color: var(--gray-200);
+  font-weight: 700;
+  font-size: 16px;
+
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+
+  transition: ease-in-out 1s;
+}
+
+.button-pomodoro.active {
+  background-color: var(--orange-300);
+  color: var(--blue-900);
+  font-weight: 800;
+  width: 30%;
+}
+
+.button-smallBreak.active {
+  background-color: var(--orange-300);
+  color: var(--blue-900);
+  font-weight: 800;
+  width: 30%;
+}
+
+.button-longBreak.active {
+  background-color: var(--orange-300);
+  color: var(--blue-900);
+  font-weight: 800;
+  width: 30%;
+}
+
+.timer {
+  margin: 2rem;
+
+  width: 380px;
+  height: 380px;
+  left: 464px;
+  top: 239px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #151932;
+  box-shadow: 0px 0px 24px 7px #151932;
+  border-radius: 200px;
+}
+
+.timer span {
+  font-family: var(--font-poppins);
+  font-size: 96px;
+  font-weight: 700;
+
+  width: 319px;
+  height: 119px;
+  left: 481px;
+  top: 356px;
+
+  color: var(--blue-100);
+}
+
+.buttons-ready {
+  display: flex;
+
+  padding: 1rem;
+}
+
+.buttons-ready button {
+  display: inline-block;
+  cursor: pointer;
+
+  width: 30%;
+
+  border: none;
+  border-radius: 30px;
+
+  font-family: var(--font-poppins);
+  font-weight: 700;
+
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.button-restart {
+  background-color: var(--green-300);
+}
+.button-start {
+  background-color: var(--orange-300);
+}
+.button-stop {
+  background-color: var(--red-800);
+}
+
+.message span {
+  color: var(--blue-100);
+}
+
+.button-config button {
+  background-color: var(--blue-900);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+
+  padding: 0.5rem;
+  margin: auto;
+
+  width: 10%;
+}
+
+footer {
+  color: var(--blue-100);
+  padding: 4rem;
+  text-align: center;
+}
+
+.footer_links {
+  padding: 1rem;
+}
+
+.footer_links a {
+  margin: 0.2rem;
+}
+
+.footer_links img {
+  width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .buttons-menu {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 3rem;
+  }
+  .button-pomodoro.active {
+    width: 100%;
+  }
+  .button-smallBreak.active{
+    width: 100%;
+  }
+  .button-longBreak.active{
+    width: 100%;
+  }
+  .timer{
+    max-width: 280px;
+    max-height: 270px;
+  }
+  .timer span {
+    font-size: 85px;
+  }
+
+  .buttons-ready {
+    padding: 0 1.5rem;
+  }
+
+  .footer_links {
+    padding: 1rem;
+    
+  }
+}
